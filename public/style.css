@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.add_team {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 32px;
+  margin-top: 20px;
+}
+
+.add_team a button {
+  padding: 5px 10px;
+  background-color: greenyellow;
+  border: 1px solid gray;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.team_card {
+  height: 120px;
+  width: 265px;
+  border: 1px solid red;
+}
+
+.team_card img {
+  height: 50px;
+  width: 50px;
+  background-size: cover;
+}
+
+
+.team_section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.player_list {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+
+}
+
+.player_list .btn {
+  padding: 2px 7px;
+}
+
+.card_section {
+  width: 95%;
+  margin: auto;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+
+}

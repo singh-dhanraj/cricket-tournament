@@ -1,0 +1,58 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+.logo{
+  height: 90px;
+  border: 1px solid red;
+  width: 35%;
+  margin: auto;
+}
+
+.team_logo{
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+
+.list{
+  display: flex;
+  justify-content: center;
+  /* margin-left: 140px; */
+}
+.logo span img{
+  background-size: cover;
+  height: 40px;
+  border-radius: 50%;
+  width: 60px;
+  margin-left: 10px;
+}
+
+.player_section{
+  display: flex;
+  gap: 10px;
+  border: 1px solid greenyellow;
+  height: 60px;
+  width: 440px;
+  margin: auto;
+}
+
+.player_list span img{
+  height: 60px;
+  width: 60px;
+}
+.player_name{
+display: flex;
+gap: 4rem;
+}
+
+.player_name .update{
+margin-top: 10px;
+}
+
+.butt{
+  margin-left: 55rem;
+  font-size: 30px;
+} 
+
