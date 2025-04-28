@@ -25,6 +25,7 @@ Route::post('/save-team', [CricketTournament::class, 'saveTeam'])->name('team.sa
 
 Route::post('/update-team', [CricketTournament::class, 'update'])->name('team.update');
 
+
 Route::get('/delete-team/{team_id}',[CricketTournament::class,'delete'])->name('team.delete');
 
 Route::get('/player-list/{team_id}', [PlayerController::class, 'index'])->name('player-list');

@@ -35,7 +35,7 @@ class CricketTournament extends Controller
                 $imageName = $newFileNamen;
             }
         }
-
+        
         $create = Team::create([
             'name' => $teamName,
             'logo' => $imageName,
@@ -51,11 +51,35 @@ class CricketTournament extends Controller
     public function update(Request $request)
     {
 
-        $edits = Team::find($request->team_id);
+        $team = Team::find($request->team_id);
 
-        $edits->update([
+        $teamLogo = $request->file('logo');
+        $imageName = $team->logo;
+        // dd($$imageName );
+
+        if ($teamLogo) {
+
+            $oldpath = public_path('uploads/team-logo/' . $team->logo);
+            $oldimage = file_exists($oldpath);
+
+            if ($oldimage) {
+                unlink($oldpath);
+            }
+
+            $image = $request->logo;
+            $fileName = $teamLogo->getClientOriginalName();
+            $newFileNamen = time() . '.' . $fileName;
+            $folderPath = public_path('uploads/team-logo');
+
+            if ($image->move($folderPath, $newFileNamen)) {
+                $imageName = $newFileNamen;
+            }
+        }
+
+        $team->update([
 
             'name' => $request->name,
+            'logo' => $imageName
 
         ]);
         return redirect()->back();
@@ -64,12 +88,10 @@ class CricketTournament extends Controller
     public function delete(Request $request)
     {
         $team = Team::find($request->team_id);
-
         $team->delete();
 
         return redirect()->back();
     }
 
+};
 
-}
-;

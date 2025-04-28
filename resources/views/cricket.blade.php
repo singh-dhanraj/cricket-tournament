@@ -21,13 +21,13 @@
   <div class="card_section d-flex flex-wrap justify-content-center gap-4">
 
     @foreach ($teams as $team)
-    <div class="team_card card shadow" style="width: 18rem;">
+    <div class="team_card card shadow" style="width: 17rem;">
       <div class="card-body text-center">
       <img src="{{ asset('uploads/team-logo/' . $team->logo) }}" class="img-fluid mb-2" alt="Team Logo"
-        style="height:150px; object-fit:cover;">
+        style="height:150px; width: 100px; object-fit:cover;">
       <h5 class="card-title">{{ $team->name }}</h5>
 
-      <div class="d-flex justify-content-center gap-2 mt-3">
+      <div class="d-flex justify-content-center gap-3 mt-3">
         <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#editTeamModal-{{ $team->id }}">
         Edit
         </button>
